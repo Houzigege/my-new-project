@@ -1,0 +1,30 @@
+{
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "eject": "expo eject"
+  },
+  "dependencies": {
+    "@ant-design/react-native": "^3.0.3",
+    "dva-core": "^1.4.0",
+    "expo": "^32.0.0",
+    "react": "16.5.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+    "react-native-storage": "^1.0.0-beta.1",
+    "react-navigation": "^3.0.9",
+    "react-navigation-redux-helpers": "^2.0.9",
+    "react-redux": "^6.0.0"
+  },
+  "devDependencies": {
+    "babel-preset-expo": "^5.0.0",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-decorators": "^7.2.3",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/runtime": "^7.2.0",
+    "babel-plugin-import": "^1.11.0",
+    "metro-react-native-babel-preset": "0.51.0"
+  },
+  "private": true
+}
