@@ -6,6 +6,8 @@ import Home from '../pages/home/home';
 import Message from '../pages/message/message1';
 import Information from '../pages/message/message2';
 import Mine from '../pages/message/message3';
+import homeIcon from '../assets/house.png';
+import personIcon from '../assets/person.png';
 
 
 const AppTabsNavigator = createBottomTabNavigator({
@@ -23,7 +25,7 @@ const AppTabsNavigator = createBottomTabNavigator({
                     <TabBarItem
                         tintColor={tintColor}
                         focused={focused}
-                        icon={'audio'}
+                        icon={homeIcon}
                     />
                 ),
 
@@ -42,9 +44,10 @@ const AppTabsNavigator = createBottomTabNavigator({
                     />),
                 tabBarIcon:({focused,tintColor}) => (
                     <TabBarItem
+                        type={true}
                         tintColor={tintColor}
                         focused={focused}
-                        icon={'audio'}
+                        icon={personIcon}
                     />
                 ),
 
@@ -65,7 +68,7 @@ const AppTabsNavigator = createBottomTabNavigator({
                     <TabBarItem
                         tintColor={tintColor}
                         focused={focused}
-                        icon={'audio'}
+                        icon={homeIcon}
                     />
                 ),
 
@@ -86,7 +89,7 @@ const AppTabsNavigator = createBottomTabNavigator({
                     <TabBarItem
                         tintColor={tintColor}
                         focused={focused}
-                        icon={'audio'}
+                        icon={personIcon}
                     />
                 ),
 

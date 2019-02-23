@@ -1,12 +1,14 @@
 import React,{Component} from 'react';
-import { View, Platform } from 'react-native';
-import { Badge, Icon } from '@ant-design/react-native';
+import { View, Platform, Image } from 'react-native';
+import { Badge } from '@ant-design/react-native';
+import { connect } from 'react-redux';
 
 
+@connect(({ user }) => ({ user }))
 export default class TabBarItem extends Component {
-
     render() {
-        const unread = this.props.reduxData && this.props.reduxData.data && this.props.reduxData.data.length > 0;
+        console.log(this.props);
+        const unread = this.props.user && this.props.user.userName && this.props.user.userName.length > 0;
         return(
             <View>
                 {
@@ -18,7 +20,7 @@ export default class TabBarItem extends Component {
                                 }
                             }),
                         }}>
-                            <Icon name={this.props.icon} style={{color: this.props.tintColor}} />
+                            <Image source={this.props.icon} style={{width: 32, height: 32, resizeMode: 'stretch'}} />
                             {
                                 this.props.type && unread ? (
                                     <View  style={{
@@ -35,6 +37,9 @@ export default class TabBarItem extends Component {
                                             ...Platform.select({
                                                 android: {
                                                     left: 4, bottom: 3
+                                                },
+                                                ios:{
+                                                    left: 6,bottom: 4
                                                 }
                                             }),
                                         }} dot />
@@ -44,7 +49,7 @@ export default class TabBarItem extends Component {
                         </View>
                     ) : (
                         <View>
-                            <Icon name={this.props.icon} style={{color: this.props.tintColor}} />
+                            <Image source={this.props.icon} style={{width: 32, height: 32, resizeMode: 'stretch'}} />
                         </View>
                     )
                 }

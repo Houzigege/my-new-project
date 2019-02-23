@@ -19,6 +19,10 @@ export default class App extends Component {
 
   }
 
+  componentWillReceiveProps (nextProps) {
+    console.log('12313131312312', nextProps)
+  }
+
   render() {
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
